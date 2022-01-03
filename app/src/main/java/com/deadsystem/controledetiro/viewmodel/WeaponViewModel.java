@@ -1,16 +1,16 @@
-package com.deadsystem.controledetiro.ui.gallery;
+package com.deadsystem.controledetiro.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class WeaponViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public WeaponViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is Weapon fragment");
     }
 
     public LiveData<String> getText() {

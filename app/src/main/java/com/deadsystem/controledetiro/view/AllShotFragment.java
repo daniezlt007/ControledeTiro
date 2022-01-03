@@ -1,4 +1,4 @@
-package com.deadsystem.controledetiro.ui.slideshow;
+package com.deadsystem.controledetiro.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,24 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.deadsystem.controledetiro.R;
-import com.deadsystem.controledetiro.databinding.FragmentSlideshowBinding;
+import com.deadsystem.controledetiro.databinding.FragmentShotBinding;
+import com.deadsystem.controledetiro.viewmodel.AllShotViewModel;
 
-public class SlideshowFragment extends Fragment {
+public class AllShotFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
-    private FragmentSlideshowBinding binding;
+    private AllShotViewModel allShotViewModel;
+    private FragmentShotBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        allShotViewModel =
+                new ViewModelProvider(this).get(AllShotViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentShotBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textHome;
+        allShotViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

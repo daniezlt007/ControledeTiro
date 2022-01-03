@@ -1,16 +1,16 @@
-package com.deadsystem.controledetiro.ui.slideshow;
+package com.deadsystem.controledetiro.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class AllShotViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public AllShotViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is All fragment");
     }
 
     public LiveData<String> getText() {

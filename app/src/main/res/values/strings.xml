@@ -7,7 +7,17 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_shot">Tiros</string>
+    <string name="menu_weapon">Armas</string>
+    <string name="menu_shooting_club">Estandes</string>
+
+    <string-array name="shots_array">
+        <item>SELECIONE O TIPO</item>
+        <item>CARABINA</item>
+        <item>ESPINGARDA</item>
+        <item>FUZIL</item>
+        <item>PISTOLA</item>
+        <item>REVÓLVER</item>
+        <item>RIFLE</item>
+    </string-array>
 </resources>

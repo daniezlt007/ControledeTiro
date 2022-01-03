@@ -1,4 +1,4 @@
-package com.deadsystem.controledetiro.ui.gallery;
+package com.deadsystem.controledetiro.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,24 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.deadsystem.controledetiro.R;
-import com.deadsystem.controledetiro.databinding.FragmentGalleryBinding;
+import com.deadsystem.controledetiro.databinding.FragmentShootingClubBinding;
+import com.deadsystem.controledetiro.viewmodel.ShootingClubViewModel;
 
-public class GalleryFragment extends Fragment {
+public class ShootingClubFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
-    private FragmentGalleryBinding binding;
+    private ShootingClubViewModel shootingClubViewModel;
+    private FragmentShootingClubBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        shootingClubViewModel =
+                new ViewModelProvider(this).get(ShootingClubViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentShootingClubBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textSlideshow;
+        shootingClubViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
